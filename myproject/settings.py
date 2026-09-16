@@ -75,12 +75,19 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ITI_Zeina',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'USER': 'postgres',
+        'PASSWORD':'Zeina'
+
     }
 }
+
 
 
 # Password validation
@@ -132,3 +139,6 @@ MAILERS = {
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS =['static']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR/'media'
